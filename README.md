@@ -2,6 +2,23 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.2.
 
+Ce projet traitera uniquement ce qui concerne les signaux sur Angular. 
+Dans ce projet, on va mettre en place une liste de taches, que l'on va stocker dans le local storage. Les taches pourront changer de status.
+
+## Development steps
+
+* Init project
+```bash
+ng new task-app
+```
+* Create components
+```bash
+ng g c tasks --skip-tests
+ng g c task-item --skip-tests
+ng g c task-list --skip-tests
+```
+* Create model and utile file
+
 ## Development server
 
 To start a local development server, run:
