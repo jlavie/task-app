@@ -1,1 +1,10 @@
-<p>task-list works!</p>
+<button (click)="generateTasks()">Générer des données dans le local storage</button>
+<button (click)="clearTasks()">Vides les taches dans le local storage</button>
+
+<ul class="task-wrapper">
+    @for(task of tasks(); track task._id) {
+        <li class="list-item">
+                <app-task-item [task]="task" />
+        </li>
+    }
+</ul>
