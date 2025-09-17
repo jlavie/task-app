@@ -1,0 +1,18 @@
+button {
+    width: 150px;
+    height: 40px;
+    color: var(--secondary-color);
+    border: none;
+    background-color: transparent;
+    margin: var(--text-font-size);
+    cursor: pointer;
+    font-size: 15px;
+    border: 2px solid var(--secondary-color);
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+}
+  
+button:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
