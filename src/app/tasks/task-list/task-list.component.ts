@@ -30,4 +30,7 @@ export class TaskListComponent {
     return this.tasks().filter(task => task.status === status);
   }
 
+  countTaskByStatus(status: string) {
+    return this.tasks().filter(task => task.status === status).length;
+  }
 }

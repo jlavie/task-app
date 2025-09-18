@@ -15,7 +15,9 @@ export class LocalStorageService {
             { _id: 1, title: 'Tâche 1', done: false, status: TaskStatus.NEW },
             { _id: 2, title: 'Tâche 2', done: true, status: TaskStatus.DONE },
             { _id: 3, title: 'Tâche 3', done: false, status: TaskStatus.PENDING },
-            { _id: 4, title: 'Tâche 4', done: true, status: TaskStatus.IN_PROGRESS }
+            { _id: 4, title: 'Tâche 4', done: true, status: TaskStatus.IN_PROGRESS },
+            { _id: 5, title: 'Tâche 5', done: true, status: TaskStatus.DONE },
+            { _id: 6, title: 'Tâche 6', done: true, status: TaskStatus.NEW }
           ];
 
         this.setItem(tasks);
