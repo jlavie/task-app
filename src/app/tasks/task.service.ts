@@ -1,5 +1,6 @@
 import { effect, Injectable, signal } from "@angular/core";
 import { Task } from "./task.model";
+import { TaskStatus } from "./task.utils";
 
 @Injectable({providedIn: 'root'})
 export class LocalStorageService {
@@ -11,8 +12,10 @@ export class LocalStorageService {
 
     generateTasks() {
         const tasks = [
-            { _id: 1, title: 'Tâche 1', done: false },
-            { _id: 2, title: 'Tâche 2', done: true }
+            { _id: 1, title: 'Tâche 1', done: false, status: TaskStatus.NEW },
+            { _id: 2, title: 'Tâche 2', done: true, status: TaskStatus.DONE },
+            { _id: 3, title: 'Tâche 3', done: false, status: TaskStatus.PENDING },
+            { _id: 4, title: 'Tâche 4', done: true, status: TaskStatus.IN_PROGRESS }
           ];
 
         this.setItem(tasks);

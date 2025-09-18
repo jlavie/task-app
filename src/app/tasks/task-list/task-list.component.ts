@@ -1,7 +1,7 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { LocalStorageService } from '../task.service';
-import { Task } from '../task.model';
 import { TaskItemComponent } from "../task-item/task-item.component";
+import { TaskStatus } from '../task.utils';
 
 @Component({
   selector: 'app-task-list',
@@ -15,6 +15,9 @@ export class TaskListComponent {
   // computed sert à automatiser la mise a jour d'un signal
   // a chaque lecture de tasks, la fonction fournie par computed sera lancée
 
+  taskStatus = Object.values(TaskStatus);
+  taskStatusEntries = Object.entries(TaskStatus);
+
   generateTasks() {
     this.taskService.generateTasks();
   }
@@ -22,4 +25,9 @@ export class TaskListComponent {
   clearTasks() {
     this.taskService.removeItems('tasks');
   }
+
+  getTaskByStatus(status: string) {
+    return this.tasks().filter(task => task.status === status);
+  }
+
 }

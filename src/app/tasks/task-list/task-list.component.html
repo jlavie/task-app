@@ -2,7 +2,20 @@
 <button (click)="clearTasks()">Vides les taches</button>
 
 <div class="task-list">
-    @for(task of tasks(); track task._id) {
-        <app-task-item [task]="task" />
+    <!-- <pre>@for(status of taskStatus; track taskStatus) {
+        {{ status }}
+    }
+    @for(status of taskStatusEntries; track taskStatusEntries) {
+        {{ status }}
+    }</pre>
+ -->
+    
+    @for(status of taskStatus; track taskStatus) {
+        <div class="task-column">
+            <h2 class="task-status">{{ status }}</h2>
+            @for(task of getTaskByStatus(status); track task._id) {
+                <app-task-item [task]="task" />
+            }
+        </div>
     }
 </div>

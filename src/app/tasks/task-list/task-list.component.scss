@@ -16,3 +16,12 @@ button:hover {
     background-color: var(--secondary-color);
     color: var(--white-color);
 }
+
+.task-list {
+    display: flex;
+}
+
+.task-status {
+    font-size: var(--text-font-size);
+    text-transform: uppercase;
+}
